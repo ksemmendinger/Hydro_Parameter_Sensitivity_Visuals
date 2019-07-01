@@ -16,3 +16,11 @@ To clone this repository to your local computer:
 ```
  git clone https://github.com/ksemmendinger/SI_Hydroinformatics/
 ```
+Required python libraries:
+```
+add libraries
+```
+Required R libraries:
+```
+add libraries
+```
