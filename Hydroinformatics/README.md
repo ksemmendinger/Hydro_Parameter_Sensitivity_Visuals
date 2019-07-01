@@ -1,1 +1,1 @@
-# Case Study 3: Hydroinformatics Ensemble Parameters for NWM streamflows 
+# Case Study 2: Channel parameter ensemble schemes and streamflow from the National Water Model (NWM)
