@@ -9,7 +9,7 @@ ADD PICTURE HERE
 ## Storm Water Management Model (SWMM) Model Configuration
 - https://www.epa.gov/water-research/storm-water-management-model-swmm
 - Lumped modeling approach
-- 5000 SWMM model runs with varying parameter sets
+- 5000 SWMM model runs with parameter sets sampled from a uniform distribution
 - The model was configured with datasets from:
   - Web Soil Survey (NASS, USDA)
   - 2011 National Land Cover Dataset (USGS, 2014)
