@@ -4,12 +4,12 @@
 - Located near Ithaca, NY 14850
 - 325 km<sup>2</sup> watershed 
 
-ADD PICTURE HERE
+Image from: Knighton, J.; DeGaetano, A.; Walter, M.A. Hydrologic State Influence on Riverine Flood Discharge for a Small Temperate Watershed (Fall Creek, USA): Negative Feedbacks on the Effects of Climate Change. *J. Hydrometeorol.* **2017**, 431-449 DOI: 10.1175/JHM-D-16-0164.1 
 
 ## Storm Water Management Model (SWMM) Model Configuration
 - https://www.epa.gov/water-research/storm-water-management-model-swmm
 - Lumped modeling approach
-- 5000 SWMM model runs with parameter sets sampled from a uniform distribution
+- 24,000 SWMM model runs with parameter sets sampled from uniform distributions
 - The model was configured with datasets from:
   - Web Soil Survey (NASS, USDA)
   - 2011 National Land Cover Dataset (USGS, 2014)
