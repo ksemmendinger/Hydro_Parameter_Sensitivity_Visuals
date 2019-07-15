@@ -8,7 +8,8 @@ Created on Mon Jul  8 12:57:45 2019
 import sys
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
+
 '''
 Approximate Baysian Calculation requires:
     1) observation dataset (df_obs)
@@ -17,12 +18,6 @@ Approximate Baysian Calculation requires:
     4) tolerance
     5) number of model runs
 '''
-folder = '/Users/catiefinkenbiner/Documents/Summer Institute/CaseStudies/Case Study 0/FallCreekWS/SWMM_24000'
-#df_obs = pd.read_csv(folder+'/observation_ts.csv')
-df_parms = pd.read_csv(folder+'/params.csv',header=None)
-df_parms.columns = ['w', 'n_imperv', 'n_perv', 's_imperv', 's_perv', 'k_sat', 'per_routed', 'cmelt', 'Tb', 'A1', 'B1']
-#df_model = pd.read_csv(folder+'/simulation_ts.csv')
-df_OFs = pd.read_csv(folder+'/OF_values.csv')
 
 def approx_bayes_calc_OF(parms,OFs,simulations):
     keep_nse = []; keep_pbias = []; keep_rmse = []
