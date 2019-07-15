@@ -15,13 +15,15 @@ Approximate Baysian Calculation requires:
     1) observation dataset (df_obs)
     2) parameter sets (df_parms)
     3) model output (df_model)
-    4) tolerance
-    5) number of model runs
+    4) objective functions (df_OFs)
+    5) tolerance
+    6) number of model runs
 '''
 
 def approx_bayes_calc_OF(parms,OFs,simulations):
     keep_nse = []; keep_pbias = []; keep_rmse = []
     for i in np.arange((simulations)):
+        # User can redefine tolerance and OF here
         if tolerance_rmse < OFs.iloc[i,3]:
             keep_rmse.append(parms.loc[i])
             
