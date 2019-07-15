@@ -5,7 +5,7 @@ Authors: Kyla Semmendinger, Catherine Finkenbiner
 
 ### Project Overview and Workflow
 
-![workflow](https://user-images.githubusercontent.com/20464090/60460789-50c1e080-9c0a-11e9-9b54-acd34d3d445a.png)
+![image](https://user-images.githubusercontent.com/20464090/61244868-d49ec100-a710-11e9-93b4-a123d959f169.png)
 
 ### Abstract
 
