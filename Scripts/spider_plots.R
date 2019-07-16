@@ -10,7 +10,7 @@ spiderplot <- function(SI) {
     # if ols then the length of the list is 2 with a different format than the Sobol/Delta analyses
     if (length(dim(with_conf)) == 2) {
       
-      value <- with_conf
+      value <- as.matrix(with_conf)
       
       for (n in 1:ncol(value)) {
         
@@ -39,7 +39,7 @@ spiderplot <- function(SI) {
       
     } else {
       
-      value <- with_conf[, , 1]
+      value <- as.matrix(with_conf[, , 1])
       
       for (n in 1:ncol(value)) {
         

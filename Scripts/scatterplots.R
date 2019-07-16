@@ -21,13 +21,13 @@ par_OF_scatter <- function(params, objective_fun, OF_name) {
       ylab(OF_name)
     
     # save individual plot to output folder
-    # ggsave(paste0("output/plots/scatter/", colnames(params)[j], "_", OF_name, ".png"))
+    ggsave(paste0("output/plots/scatter/", colnames(params)[j], "_", OF_name, ".png"))
     
     # save to list for gridded plot
-    plots[[j]] <- sctplt
+    # plots[[j]] <- sctplt
     
     # paste plot to console
-    # print(sctplt)
+    print(sctplt)
     
   }
   
@@ -35,7 +35,7 @@ par_OF_scatter <- function(params, objective_fun, OF_name) {
   # do.call(grid.arrange, plots)
   # dev.copy(png, paste0("output/plots/scatter/", OF_name, ".png"))
   # dev.off()
-  x <- grid.arrange(grobs = plots, ncol = ceiling(sqrt(ncol(params))))
-  ggsave(paste0("output/plots/scatter/", OF_name, ".png"), x, width = 11, height = 8.5, units = "in")
+  # x <- grid.arrange(grobs = plots, ncol = ceiling(sqrt(ncol(params))))
+  # ggsave(paste0("output/plots/scatter/", OF_name, ".png"), x, width = 11, height = 8.5, units = "in")
 
 }
