@@ -24,3 +24,5 @@ Required R libraries:
 ```
 add libraries
 ```
+
+#### All datasets for the individual case studies are available upon request.
