@@ -1,5 +1,7 @@
 spiderplot <- function(SI) {
   
+  library(fmsb)
+  
   for (k in 1:length(SI)) {
     
     # subset sensitivty analysis results
