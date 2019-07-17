@@ -13,7 +13,7 @@ import pandas as pd
 problem = {
     'num_vars': 10,
     'names': ['qs0', 'lnTe', 'm', 'Sr0', 'Srmax', 'td', 'vch', 'vr', 'k0', 'CD'],
-    'bounds': [[0, 0.00003], # meters
+    'bounds': [[0, 0.00003],
                [-2, -0.5],
                [0.3, 1],
                [0.005, 0.2],

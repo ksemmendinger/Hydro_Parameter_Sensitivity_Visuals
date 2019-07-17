@@ -10,8 +10,8 @@ import pandas as pd
 import os
 
 # back out a directory to load python functions from "Scripts" folder
-org_dir_name = os.path.dirname(os.path.realpath('CaseStudy0_SI_RCPs.py'))
-parent_dir_name = os.path.dirname(os.path.dirname(os.path.realpath('CaseStudy0_SI_RCPs.py')))
+org_dir_name = os.path.dirname(os.path.realpath('SensIndices_RCPlots.py'))
+parent_dir_name = os.path.dirname(os.path.dirname(os.path.realpath('SensIndices_RCPlots.py')))
 os.chdir(parent_dir_name + "/Scripts")
 
 # load python functions from ‘Scripts’ folder
@@ -41,11 +41,11 @@ problem = {
 }
 
 # load in model simulations, observation data, parameter sets (Saltelli sampled), timestamps, and objective function values
-sim = pd.read_csv("Case Study 0/input/simulation_ts.csv", index_col = 0)
-obs = pd.read_csv("Case Study 0/input/observation_ts.csv")
-pars = pd.read_csv("Case Study 0/input/params.csv", header = None)
-timestamps = pd.read_csv("Case Study 0/input/timestamps.csv")
-OF = pd.read_csv("Case Study 0/input/OF_values.csv")
+sim = pd.read_csv("input/simulation_ts.csv", index_col = 0)
+obs = pd.read_csv("input/observation_ts.csv")
+pars = pd.read_csv("input/params.csv", header = 0)
+timestamps = pd.read_csv("input/timestamps.csv")
+OF = pd.read_csv("input/OF_values.csv")
 
 # save the parameter names
 param_names = problem['names']

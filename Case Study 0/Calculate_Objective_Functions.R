@@ -32,12 +32,12 @@ for (i in 1:model_runs) {
 
   print(i)
 
-  mean_error[i] <- me(sim = as.numeric(sim[i, 2:time_steps]), obs = as.numeric(obs[, 2]))
-  mean_abs_error[i] <- mae(sim = as.numeric(sim[i, 2:time_steps]), obs = as.numeric(obs[, 2]))
-  mean_sq_error[i] <- mse(sim = as.numeric(sim[i, 2:time_steps]), obs = as.numeric(obs[, 2]))
-  root_mse[i] <- rmse(sim = as.numeric(sim[i, 2:time_steps]), obs = as.numeric(obs[, 2]))
-  p_bias[i] <- pbias(sim = as.numeric(sim[i, 2:time_steps]), obs = as.numeric(obs[, 2]))
-  nse[i] <- NSE(sim = as.numeric(sim[i, 2:time_steps]), obs = as.numeric(obs[, 2]))
+  mean_error[i] <- me(sim = as.numeric(sim[i, 1:time_steps]), obs = as.numeric(obs[, 2]))
+  mean_abs_error[i] <- mae(sim = as.numeric(sim[i, 1:time_steps]), obs = as.numeric(obs[, 2]))
+  mean_sq_error[i] <- mse(sim = as.numeric(sim[i, 1:time_steps]), obs = as.numeric(obs[, 2]))
+  root_mse[i] <- rmse(sim = as.numeric(sim[i, 1:time_steps]), obs = as.numeric(obs[, 2]))
+  p_bias[i] <- pbias(sim = as.numeric(sim[i, 1:time_steps]), obs = as.numeric(obs[, 2]))
+  nse[i] <- NSE(sim = as.numeric(sim[i, 1:time_steps]), obs = as.numeric(obs[, 2]))
 
 }
 

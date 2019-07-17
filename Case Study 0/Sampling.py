@@ -30,5 +30,6 @@ problem = {
 param_values = saltelli.sample(problem, 1000)
 
 param_values = pd.DataFrame(param_values)
-param_values.to_csv("params.csv")
+param_values.columns = problem['names']
+param_values.to_csv("input/params.csv", index = False)
 

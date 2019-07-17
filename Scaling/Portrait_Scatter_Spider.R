@@ -3,12 +3,25 @@
 
 library(dplyr)
 
-# load in observation, simulation, and parameter sets
-pars <- read.csv("input/parameters.csv", header = TRUE)
+# load in parameter sets, objective functions, observation, simulation, and time steps
+pars <- read.csv("input/params.csv", header = TRUE)
   # "model_runs" rows, "num_pars" columns
 
-OF <- read.csv("input/objective_function_NSE.csv", header = TRUE)
+OF <- read.csv("input/OF_values.csv", header = TRUE) %>%
+  dplyr::select(-1)
   # "model_runs" rows, "num_OF" columns
+
+obs <- read.csv("input/observation_ts.csv", header = TRUE) %>%
+  dplyr::select(-1)
+  # "time_steps" row, "index" and "value" columns 
+
+sim <- read.csv("input/simulation_ts.csv", header = TRUE) %>%
+  dplyr::select(-1)
+  # "model_runs" rows, "time_steps" columns
+
+timestamps <- read.csv("input/timestamps.csv", header = TRUE)
+  # "time_steps" rows
+
 
 # save names of objective functions and parameters
 OF_names <- colnames(OF)
@@ -21,10 +34,12 @@ num_OF <- ncol(OF)
 
 # load in results from delta, sobol, and ols sensitivity analyses (calculated in python script)
 source("../Scripts/python_to_r_results.R")
+results_sobol <- python_to_r_results(data_type = "sobol", param_names, OF_names)
 results_delta <- python_to_r_results(data_type = "delta", param_names, OF_names)
 results_ols <- python_to_r_results(data_type = "ols", param_names, OF_names)
 
 # save as csv files
+lapply(results_sobol, function(x) write.table(data.frame(x), 'output/formatted_sobol.csv', append = T, sep = ',' ))
 lapply(results_delta, function(x) write.table(data.frame(x), 'output/formatted_delta.csv', append = T, sep = ',' ))
 lapply(results_ols, function(x) write.table(data.frame(x), 'output/formatted_ols.csv', append = T, sep = ',' ))
 
@@ -42,10 +57,12 @@ for (i in 1:num_OF) {
 
 # portrait plots of objective functions versus parameter values
 source("../Scripts/portrait_plots.R")
+portrait_plot(results_sobol)
 portrait_plot(results_delta)
 portrait_plot(results_ols)
 
 # spiders plots of objective functions versus parameter values
 source("../Scripts/spider_plots.R")
+spiderplot(results_sobol)
 spiderplot(results_delta)
 spiderplot(results_ols)
