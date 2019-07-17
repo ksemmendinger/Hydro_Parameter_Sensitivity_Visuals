@@ -47,7 +47,6 @@ lapply(results_sobol, function(x) write.table(data.frame(x), 'output/formatted_s
 lapply(results_delta, function(x) write.table(data.frame(x), 'output/formatted_delta.csv', append = T, sep = ',' ))
 lapply(results_ols, function(x) write.table(data.frame(x), 'output/formatted_ols.csv', append = T, sep = ',' ))
 
-
 # scatter plots of objective functions versus parameter values
 source("../Scripts/scatterplots.R")
 for (i in 1:num_OF) {

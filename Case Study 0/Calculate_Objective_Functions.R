@@ -7,13 +7,15 @@ library(dplyr)
 library(hydroGOF)
 
 # load in observation, simulation, and parameter sets
-obs <- read.csv("Case Study 0/input/observation_ts.csv", header = TRUE)
+obs <- read.csv("input/observation_ts.csv", header = TRUE)
   # "time_steps" row, "index" and "value" columns 
-sim <- read.csv("Case Study 0/input/simulation_ts.csv", header = TRUE, row.names = TRUE)
+sim <- read.csv("input/simulation_ts.csv", header = TRUE) %>%
+  dplyr::select(-1)
   # "model_runs" rows, "time_steps" columns
-pars <- read.csv("Case Study 0/input/params.csv", header = FALSE)
+pars <- read.csv("input/params.csv", header = FALSE)
   # "model_runs" rows, "num_pars" columns
-timestamps <- read.csv("Case Study 0/input/timestamps.csv", header = TRUE)
+timestamps <- read.csv("input/timestamps.csv", header = TRUE)
+  # "time_steps" rows
 
 model_runs <- nrow(sim)
 time_steps <- ncol(sim)
@@ -47,6 +49,6 @@ OF <- as.data.frame(mean_error) %>%
                  pbias = p_bias,
                  nse = nse)
 
-write.table(OF, "Case Study 0/input/OF_values.txt", sep = " ",
+write.table(OF, "/input/OF_values.txt", sep = " ",
             row.names = FALSE, col.names = FALSE)
 
