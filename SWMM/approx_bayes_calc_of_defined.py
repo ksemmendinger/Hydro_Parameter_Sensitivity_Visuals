@@ -67,7 +67,7 @@ def make_cdfs_pdfs(df_parms,bayes_approx,bins,alpha,cc1,cc2,parameters,metric):
     plt.tight_layout() 
     plt.savefig('output/'+metric+'_pdf.png',dpi=300)
 
-def runABC(df_parms,df_OFs,runs,bins,color1,color2,metric):
+def runABC(df_parms,df_OFs,runs,bins,color1,color2):
     # models with objective functions within tolerance thresholds
     results_nse,results_pbias,results_rmse = np.array(approx_bayes_calc_OF(df_parms,df_OFs,runs))
     
