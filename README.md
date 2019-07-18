@@ -14,7 +14,7 @@ To clone this repository to your local computer:
 ```
  git clone https://github.com/ksemmendinger/SI_Hydroinformatics/
 ```
-#### Required python3 libraries:
+#### Required python3 (v3.6.8) libraries:
 ```
 import sys
 import pandas as pd
@@ -38,7 +38,7 @@ Intall tzlocal (https://pypi.org/project/tzlocal/)
 pip install tzlocal
 ```
 
-#### Required R libraries:
+#### Required R (v3.5.1) libraries:
 ```
 library(dplyr)
 library(ggplot2)
