@@ -16,12 +16,12 @@ To clone this repository to your local computer:
 ```
  git clone https://github.com/ksemmendinger/SI_Hydroinformatics/
 ```
-Required python libraries:
+Required python3 libraries:
 ```
-sys
-pandas
-numpy
-matplotlib.pyplot
+import sys
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 ```
 Required R libraries:
 ```
