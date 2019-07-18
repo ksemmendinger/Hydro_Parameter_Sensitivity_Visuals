@@ -1,4 +1,6 @@
-# Case Study 0: Fall Creek Watershed 
+# Case Study 0: 
+
+## Project Title: Fall Creek Watershed, NY
 
 ## Study Site & Background Information
 - Located near Ithaca, NY 14850
