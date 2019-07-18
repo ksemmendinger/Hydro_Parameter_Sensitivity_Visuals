@@ -1,4 +1,4 @@
-## Case Study 3:
+## Case Study 3
 
 ### Project Title: Model-Based Parametric Analysis of Total Water Prediction in Coastal Transition Zones of the US East and Gulf Coasts
 
