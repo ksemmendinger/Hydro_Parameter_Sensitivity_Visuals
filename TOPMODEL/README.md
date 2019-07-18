@@ -1,1 +1,8 @@
-# Case Study 1: Hydrologic models of soil physical processes from the National Water Model (NWM) and TOPMODEL
+## Case Study 1:
+
+### Project Title: A Study on Parsimonious Models in Catchments Generating Saturation Excess Runoff
+
+#### Abstract
+add once they send it
+
+See Github repository for dataset and analysis: https://github.com/brittbarreto/Aquaholics_Anonymous
