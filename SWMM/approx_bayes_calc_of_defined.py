@@ -73,11 +73,11 @@ def runABC(df_parms,df_OFs,runs,bins,color1,color2,metric):
     
     # saves models with objective functions within tolerance thresholds
     bayes_approx_nse = pd.DataFrame(results_nse,columns=None)
-    bayes_approx_nse.to_csv('output/bayes_parameters_'+metric+'.csv',index=False)
+    bayes_approx_nse.to_csv('output/bayes_parameters_NSE.csv',index=False)
     bayes_approx_pbias = pd.DataFrame(results_pbias,columns=None)
-    bayes_approx_nse.to_csv('output/bayes_parameters_'+metric+'.csv',index=False)
+    bayes_approx_pbias.to_csv('output/bayes_parameters_pbias.csv',index=False)
     bayes_approx_rmse = pd.DataFrame(results_rmse,columns=None)
-    bayes_approx_nse.to_csv('output/bayes_parameters_'+metric+'.csv',index=False)
+    bayes_approx_rmse.to_csv('output/bayes_parameters_rmse.csv',index=False)
     
     parameters = list(df_parms.columns.values)
     
