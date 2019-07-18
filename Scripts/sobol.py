@@ -38,7 +38,7 @@ def objective_function_sobol(problem, OF):
         # save output to text file
         keys = SI.keys()
                     
-        with open('output/sobol_' + OF.columns[j] + '.csv', 'w') as csvfile:
+        with open('output/raw/sobol_' + OF.columns[j] + '.csv', 'w') as csvfile:
             fieldnames = keys
             writer = csv.DictWriter(csvfile, fieldnames = fieldnames)
             writer.writeheader()

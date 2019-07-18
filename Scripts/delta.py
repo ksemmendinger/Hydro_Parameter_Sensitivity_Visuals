@@ -34,7 +34,7 @@ def objective_function_delta(problem, pars, OF):
         # save output to text file
         keys = DI.keys()
                     
-        with open('output/delta_' + OF.columns[j] + '.csv', 'w') as csvfile:
+        with open('output/raw/delta_' + OF.columns[j] + '.csv', 'w') as csvfile:
             fieldnames = keys
             writer = csv.DictWriter(csvfile, fieldnames = fieldnames)
             writer.writeheader()

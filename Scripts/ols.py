@@ -38,7 +38,7 @@ def objective_function_OLS(OF, pars, param_names):
             results_by_OF.append([str([param_names[k] + '_' + OF.columns[j]]), fit.rsquared])
             results.append([str([param_names[k] + '_' + OF.columns[j]]), fit.rsquared])
             
-        with open('output/ols_' + OF.columns[j] + '.csv', 'w') as resultFile:
+        with open('output/raw/ols_' + OF.columns[j] + '.csv', 'w') as resultFile:
             wr = csv.writer(resultFile, dialect = 'excel')
             wr.writerows(results_by_OF)
 

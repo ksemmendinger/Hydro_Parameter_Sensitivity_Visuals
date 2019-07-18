@@ -19,6 +19,7 @@ import delta
 import sobol
 import ols
 import radial_conv_plots
+import magnitude_percentile_plots
 
 # move back into case study 0 folder
 os.chdir(org_dir_name)
@@ -40,11 +41,8 @@ problem = {
                [1, 3]]
 }
 
-# load in model simulations, observation data, parameter sets (Saltelli sampled), timestamps, and objective function values
-sim = pd.read_csv("input/simulation_ts.csv", index_col = 0)
-obs = pd.read_csv("input/observation_ts.csv")
+# load in model parameter sets (Saltelli sampled) and objective function values
 pars = pd.read_csv("input/params.csv", header = 0)
-timestamps = pd.read_csv("input/timestamps.csv")
 OF = pd.read_csv("input/OF_values.csv")
 
 # save the parameter names

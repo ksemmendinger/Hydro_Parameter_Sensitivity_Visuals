@@ -4,17 +4,19 @@
 library(dplyr)
 
 # load in observation, simulation, and parameter sets
-obs <- read.csv("input/observation_ts.csv", header = TRUE)
+obs <- read.csv("input/observation_ts.csv", header = TRUE) %>%
+  dplyr::select(-1)
   # "time_steps" row, 1 column of values
 
 sim <- read.csv("input/simulation_ts.csv", header = TRUE) %>%
   dplyr::select(-1)
   # "model_runs" rows, "time_steps" columns
 
-pars <- read.csv("input/params.csv", header = FALSE)
+pars <- read.csv("input/params.csv", header = TRUE)
   # "model_runs" rows, "num_pars" columns
 
-timestamps <- read.csv("input/timestamps.csv", header = TRUE)
+timestamps <- read.csv("input/timestamps.csv", header = TRUE) %>%
+  dplyr::select(-1)
   # "time_steps" row, 1 column of values
 
 OF <- read.csv("input/OF_values.csv", header = TRUE)
@@ -22,13 +24,7 @@ OF <- read.csv("input/OF_values.csv", header = TRUE)
 
 # save names of objective functions and parameters
 OF_names <- colnames(OF)
-param_names <- c("w", "n_imperv", "n_perv", "s_imperv", "s_perv", "k_sat", 
-                 "per_routed", "cmelt", "Tb", "A1", "B1")
-
-# clean up data
-obs <- array(obs[, 2])
-timestamps <- array(timestamps[, 2])
-colnames(pars) <- param_names
+param_names <- colnames(pars)
 
 # set variables of number of model runs, time steps, and number of parameters
 model_runs <- nrow(sim)

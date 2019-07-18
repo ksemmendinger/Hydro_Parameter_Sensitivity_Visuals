@@ -22,7 +22,7 @@ python_to_r_results <- function(data_type, param_names, OF_names) {
     
     for (i in 1:num_OF) {
       
-      tmp <- read.csv(paste0("output/sobol_", OF_names[i], ".csv"))
+      tmp <- read.csv(paste0("output/raw/sobol_", OF_names[i], ".csv"))
       
       # format the sobol first-order indices
       S1 <- as.character(tmp[, "S1"])
@@ -86,7 +86,7 @@ python_to_r_results <- function(data_type, param_names, OF_names) {
     
     for (i in 1:num_OF) {
       
-      tmp <- read.csv(paste0("output/delta_", OF_names[i], ".csv"))
+      tmp <- read.csv(paste0("output/raw/delta_", OF_names[i], ".csv"))
       
       # format the sobol total-order indices
       del <- as.character(tmp[, "delta"])
@@ -138,7 +138,7 @@ python_to_r_results <- function(data_type, param_names, OF_names) {
     
     for (i in 1:num_OF) {
       
-      tmp <- read.csv(paste0("output/ols_", OF_names[i], ".csv"), header = FALSE)
+      tmp <- read.csv(paste0("output/raw/ols_", OF_names[i], ".csv"), header = FALSE)
       
       ols[, OF_names[i]] <- tmp[, "V2"]
     
