@@ -18,7 +18,10 @@ To clone this repository to your local computer:
 ```
 Required python libraries:
 ```
-add libraries
+sys
+pandas
+numpy
+matplotlib.pyplot
 ```
 Required R libraries:
 ```
