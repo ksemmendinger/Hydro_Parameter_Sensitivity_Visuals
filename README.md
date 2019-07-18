@@ -14,16 +14,39 @@ To clone this repository to your local computer:
 ```
  git clone https://github.com/ksemmendinger/SI_Hydroinformatics/
 ```
-Required python3 libraries:
+#### Required python3 libraries:
 ```
 import sys
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import network as nx
+import itertools
+import csv
+import scipy
 ```
-Required R libraries:
+Install SALib (https://pypi.org/project/SALib/)
 ```
-add libraries
+pip install SALib
+```
+Install rpy2 (https://rpy2.readthedocs.io/en/version_2.8.x/)
+```
+pip install rpy2
+```
+Intall tzlocal (https://pypi.org/project/tzlocal/)
+```
+pip install tzlocal
 ```
 
-#### All datasets for the individual case studies are available upon request.
+#### Required R libraries:
+```
+library(dplyr)
+library(ggplot2)
+library(wesanderson)
+library(reshape2)
+library(lattice)
+library(RColorBrewer)
+library(gridExtra)
+library(fmsb)
+library(hydroGOF)
+```
