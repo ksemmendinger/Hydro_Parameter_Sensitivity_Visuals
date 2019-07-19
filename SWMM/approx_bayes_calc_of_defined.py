@@ -44,28 +44,28 @@ def make_histograms(df_parms,bayes_approx,bins,alpha,cc1,cc2,parameters,metric):
         ax.set_xlabel(str(parameters[col-1]))    
     plt.legend(['Output','ABC'],fancybox=True)
     plt.tight_layout() 
-    plt.savefig('output/'+metric+'.png',dpi=300)
+    plt.savefig('output/plots/ABC/'+metric+'.png',dpi=300)
 
 def make_cdfs_pdfs(df_parms,bayes_approx,bins,alpha,cc1,cc2,parameters,metric):
     plt.figure(figsize=(12,12))
-    for col in np.arange(1,((df_parms.iloc[0,:]).size)):
+    for col in np.arange(1,((df_parms.iloc[0,:]).size)+1):
         plt.subplot(4,3,col)
-        ax = df_parms.iloc[:,col].plot.hist(cumulative=True, density=1,bins=bins,alpha=alpha,color=cc1)    
-        ax = bayes_approx.iloc[:,col].plot.hist(cumulative=True, density=1,bins=bins,alpha=alpha,color=cc2)
-        ax.set_xlabel(str(parameters[col]))    
+        ax = df_parms.iloc[:,col-1].plot.hist(cumulative=True, density=1,bins=bins,alpha=alpha,color=cc1)    
+        ax = bayes_approx.iloc[:,col-1].plot.hist(cumulative=True, density=1,bins=bins,alpha=alpha,color=cc2)
+        ax.set_xlabel(str(parameters[col-1]))    
     plt.legend(['Output','ABC'],fancybox=True)
     plt.tight_layout() 
-    plt.savefig('output/'+metric+'_cdf.png',dpi=300)
+    plt.savefig('output/plots/ABC/'+metric+'_cdf.png',dpi=300)
     
     plt.figure(figsize=(12,12))
-    for col in np.arange(1,((df_parms.iloc[0,:]).size)):
+    for col in np.arange(1,((df_parms.iloc[0,:]).size)+1):
         plt.subplot(4,3,col)
-        ax = df_parms.iloc[:,col].plot.kde(alpha=alpha,color=cc1)    
-        ax = bayes_approx.iloc[:,col].plot.kde(alpha=alpha,color=cc2)
-        ax.set_xlabel(str(parameters[col]))    
+        ax = df_parms.iloc[:,col-1].plot.kde(alpha=alpha,color=cc1)    
+        ax = bayes_approx.iloc[:,col-1].plot.kde(alpha=alpha,color=cc2)
+        ax.set_xlabel(str(parameters[col-1]))    
     plt.legend(['Output','ABC'],fancybox=True)
     plt.tight_layout() 
-    plt.savefig('output/'+metric+'_pdf.png',dpi=300)
+    plt.savefig('output/plots/ABC/'+metric+'_pdf.png',dpi=300)
 
 def runABC(df_parms,df_OFs,runs,bins,color1,color2):
     # models with objective functions within tolerance thresholds
