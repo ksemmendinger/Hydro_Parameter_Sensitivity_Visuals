@@ -3,21 +3,9 @@
 
 library(dplyr)
 
-# load in observation, simulation, and parameter sets
-obs <- read.csv("input/observation_ts.csv", header = TRUE) %>%
-  dplyr::select(-1)
-  # "time_steps" row, 1 column of values
-
-sim <- read.csv("input/simulation_ts.csv", header = TRUE) %>%
-  dplyr::select(-1)
-  # "model_runs" rows, "time_steps" columns
-
+# load in objective function values and parameter sets
 pars <- read.csv("input/params.csv", header = TRUE)
   # "model_runs" rows, "num_pars" columns
-
-timestamps <- read.csv("input/timestamps.csv", header = TRUE) %>%
-  dplyr::select(-1)
-  # "time_steps" row, 1 column of values
 
 OF <- read.csv("input/OF_values.csv", header = TRUE)
   # "model_runs" rows, "num_OF" columns
