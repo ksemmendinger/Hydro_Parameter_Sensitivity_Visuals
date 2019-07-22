@@ -196,10 +196,11 @@ def radial_conv_plots(problem, results, OF):
                 position = (radius*1.05*np.cos(angle(Pos[text],center)), radius*1.05*np.sin(angle(Pos[text],center)))
             else:
                 position = (radius*1.01*np.cos(angle(Pos[text],center)), radius*1.01*np.sin(angle(Pos[text],center)))
-            plt.annotate(text, position, fontsize = 12, color='#0B2D61', family='sans-serif')          
+            plt.annotate(text, position, fontsize = 15, color='#0B2D61', family='sans-serif')          
         
         plt.axis('off')
         plt.tight_layout()
-        plt.savefig('output/plots/radial_convergence/radial_conv_' + OF.columns[j] + '.png', bbox_inches = 'tight', transparent = True)
+        #plt.savefig('output/plots/radial_convergence/radial_conv_' + OF.columns[j] + '.png', bbox_inches = 'tight', transparent = True)
+        plt.savefig('output/plots/radial_convergence/radial_conv_' + OF.columns[j] + '.eps', format = 'eps', dpi = 1000)
         plt.show()
  

@@ -17,7 +17,7 @@ portrait_plot <- function(SI) {
       value <- as.matrix(with_conf)
       
       # write and save portrait plot
-      png("output/plots/portrait/ols.png", width = 700, height = 500)
+      png("output/plots/portrait/ols.png", width = 11, height = 8.5, units = 'in', res = 1000)
       col <- colorRampPalette(brewer.pal(9, "PuBuGn"))
       print(levelplot(value, xlab = "Parameter", ylab = "Objective Function", col.regions = col,
                       main = paste0("Portrait Plot for OLS Sensitivity Analysis")))
@@ -32,13 +32,13 @@ portrait_plot <- function(SI) {
       value <- as.matrix(with_conf[, , 1])
       
       # write and save portrait plot
-      png(paste0("output/plots/portrait/", dimnames(with_conf)[[3]][1], ".png"), width = 700, height = 500)
+      png(paste0("output/plots/portrait/", dimnames(with_conf)[[3]][1], ".png"), width = 11, height = 8.5, units = 'in',res = 1000)
       col <- colorRampPalette(brewer.pal(9, "PuBuGn"))
       print(levelplot(value, xlab = "Parameter", ylab = "Objective Function", col.regions = col,
                       main = paste0("Portrait Plot for ", toTitleCase(dimnames(with_conf)[[3]][1])," Sensitivity Analysis")))
       dev.off()
       
-      print(levelplot(value, xlab = "Parameter", ylab = "Objective Function", col.regions = col,
+      print(levelplot(value, xlab = "Parameter", ylab = "Objective Function", col.regions = col, 
                       main = paste0("Portrait Plot for ", toTitleCase(dimnames(with_conf)[[3]][1])," Sensitivity Analysis")))
       
     }

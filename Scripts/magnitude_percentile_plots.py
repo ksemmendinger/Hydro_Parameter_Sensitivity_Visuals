@@ -21,9 +21,11 @@ def magnitude_perc_plots(sim, obs):
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
     ax.plot(np.arange(len(obs)), obs, c = 'black')
-    ax.set_ylabel('Observation Value', fontsize = 12)
-    ax.set_xlabel('Observation', fontsize = 12)
-    plt.savefig('output/plots/magnitude_perc/observation_data.png')
+    ax.set_ylabel('Observation Value', fontsize = 15)
+    ax.set_xlabel('Observation', fontsize = 15)
+    # plt.savefig('output/plots/magnitude_perc/observation_data.png')
+    plt.savefig('output/plots/magnitude_perc/observation_data.eps', format = 'eps', dpi = 1000)
+
 
     # sort historical data in percentiles of magnitude
     obs_sort = np.sort(obs)
@@ -37,7 +39,9 @@ def magnitude_perc_plots(sim, obs):
     ax.plot(P, obs_sort, c = 'black')
     ax.set_ylabel('Observation Value', fontsize = 12)
     ax.set_xlabel('Magnitude Percentile', fontsize = 12)
-    plt.savefig('output/plots/magnitude_perc/historical_data_percentiles.png')
+    # plt.savefig('output/plots/magnitude_perc/historical_data_percentiles.png')
+    plt.savefig('output/plots/magnitude_perc/historical_data_percentiles.eps', format = 'eps', dpi = 1000)
+
 
     # sort simulation data
     sim_sort = np.zeros_like(sim)
@@ -55,7 +59,9 @@ def magnitude_perc_plots(sim, obs):
     ax.legend(loc = 'upper left')
     ax.set_ylabel('Observation Value', fontsize = 12)
     ax.set_xlabel('Magnitude Percentile', fontsize = 12)
-    plt.savefig('output/plots/magnitude_perc/experiment_data_all.png') 
+    # plt.savefig('output/plots/magnitude_perc/experiment_data_all.png')
+    plt.savefig('output/plots/magnitude_perc/experiment_data_all.eps', format = 'eps', dpi = 1000)
+
 
     # plot range of experiment outputs
     fig = plt.figure()
@@ -67,7 +73,9 @@ def magnitude_perc_plots(sim, obs):
     ax.legend(loc = 'upper left')
     ax.set_ylabel('Observation Value', fontsize = 12)
     ax.set_xlabel('Magnitude Percentile', fontsize = 12)
-    plt.savefig('output/plots/magnitude_perc/experiment_data_range.png') 
+    # plt.savefig('output/plots/magnitude_perc/experiment_data_range.png') 
+    plt.savefig('output/plots/magnitude_perc/experiment_data_range.eps', format = 'eps', dpi = 1000)
+
 
     # to plot output density of experiment we need an array of percentiles
     p = np.arange(100, 0, -10)
@@ -98,5 +106,8 @@ def magnitude_perc_plots(sim, obs):
     ax.set_xlim(0, 100)
     ax.legend(handles = handles, labels = labels, framealpha = 1, fontsize = 8, loc = 'upper left', title = 'Frequency in experiment', ncol = 2)
     ax.set_xlabel('Magnitude Percentile', fontsize = 12)
-    plt.savefig('output/plots/magnitude_perc/experiment_data_density.png')
+    # plt.savefig('output/plots/magnitude_perc/experiment_data_density.png')
+    plt.savefig('output/plots/magnitude_perc/experiment_data_density.eps', format = 'eps', dpi = 1000)
+
+    
     

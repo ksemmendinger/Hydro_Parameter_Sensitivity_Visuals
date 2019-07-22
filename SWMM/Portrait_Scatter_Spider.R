@@ -15,8 +15,7 @@ OF_names <- colnames(OF)
 param_names <- colnames(pars)
 
 # set variables of number of model runs, time steps, and number of parameters
-model_runs <- nrow(sim)
-time_steps <- ncol(sim)
+model_runs <- nrow(pars)
 num_pars <- ncol(pars)
 num_OF <- ncol(OF)
 
