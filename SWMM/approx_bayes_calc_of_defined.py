@@ -88,8 +88,8 @@ def runABC(df_parms,df_OFs,runs,bins,color1,color2):
     
     print('precent of models with',str(-tolerance_pbias),'<= p-bias >=',str(tolerance_pbias),'are:',str(len(results_pbias)/runs),'%')
     make_histograms(df_parms,bayes_approx_pbias,bins,0.5,color1,color3,parameters,'pbias')
-    make_cdfs_pdfs(df_parms,bayes_approx_nse,bins,0.5,color1,color3,parameters,'pbias')
+    make_cdfs_pdfs(df_parms,bayes_approx_pbias,bins,0.5,color1,color3,parameters,'pbias')
     
     print('precent of models with RMSE < to',str(tolerance_rmse),'are:',str(len(results_rmse)/runs),'%')
     make_histograms(df_parms,bayes_approx_rmse,bins,0.5,color1,color4,parameters,'RMSE')
-    make_cdfs_pdfs(df_parms,bayes_approx_nse,bins,0.5,color1,color4,parameters,'RMSE')
+    make_cdfs_pdfs(df_parms,bayes_approx_rmse,bins,0.5,color1,color4,parameters,'RMSE')
