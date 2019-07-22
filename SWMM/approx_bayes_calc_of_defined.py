@@ -44,7 +44,7 @@ def make_histograms(df_parms,bayes_approx,bins,alpha,cc1,cc2,parameters,metric):
         ax.set_xlabel(str(parameters[col-1]))    
     plt.legend(['Output','ABC'],fancybox=True)
     plt.tight_layout() 
-    plt.savefig('output/plots/ABC/'+metric+'.png',dpi=300)
+    plt.savefig('output/plots/ABC/'+metric+'_histogram.png',dpi=300)
 
 def make_cdfs_pdfs(df_parms,bayes_approx,bins,alpha,cc1,cc2,parameters,metric):
     plt.figure(figsize=(12,12))
