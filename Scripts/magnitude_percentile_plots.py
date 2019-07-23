@@ -66,9 +66,10 @@ def magnitude_perc_plots(sim, obs):
     # plot range of experiment outputs
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
-    ax.fill_between(P, np.min(sim_sort[:, :], 1), np.max(sim_sort[:, :], 1), color = '#4286f4', alpha = 0.1, label = 'Simulation')
-    ax.plot(P, np.min(sim_sort[:, :], 1), linewidth = 0.5, color = '#4286f4', alpha = 0.3)
-    ax.plot(P, np.max(sim_sort[:, :], 1), linewidth = 0.5, color = '#4286f4', alpha = 0.3)        
+    trans_sim_sort = np.transpose(sim_sort)
+    ax.fill_between(P, np.min(trans_sim_sort[:, :], 1), np.max(trans_sim_sort[:, :], 1), color = '#4286f4', alpha = 0.1, label = 'Simulation')
+    ax.plot(P, np.min(trans_sim_sort[:, :], 1), linewidth = 0.5, color = '#4286f4', alpha = 0.3)
+    ax.plot(P, np.max(trans_sim_sort[:, :], 1), linewidth = 0.5, color = '#4286f4', alpha = 0.3)        
     ax.plot(P, obs_sort, c = 'black', label = 'Observation')
     ax.legend(loc = 'upper left')
     ax.set_ylabel('Observation Value', fontsize = 12)
@@ -95,8 +96,8 @@ def magnitude_perc_plots(sim, obs):
     ax = fig.add_subplot(1, 1, 1)
     
     for i in range(len(p)):
-        ax.fill_between(P, np.min(sim_sort[:, :], 1), np.percentile(sim_sort[:, :], p[i], axis = 1), color='#4286f4', alpha = 0.1)
-        ax.plot(P, np.percentile(sim_sort[:, :], p[i], axis = 1), linewidth = 0.5, color = '#4286f4', alpha = 0.3)
+        ax.fill_between(P, np.min(trans_sim_sort[:, :], 1), np.percentile(trans_sim_sort[:, :], p[i], axis = 1), color='#4286f4', alpha = 0.1)
+        ax.plot(P, np.percentile(trans_sim_sort[:, :], p[i], axis = 1), linewidth = 0.5, color = '#4286f4', alpha = 0.3)
         handle = matplotlib.patches.Rectangle((0, 0), 1, 1, color = '#4286f4', alpha = alpha(i, base = 0.1))
         handles.append(handle)
         label = "{:.0f} %".format(100 - p[i])

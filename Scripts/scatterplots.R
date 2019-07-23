@@ -34,9 +34,9 @@ par_OF_scatter <- function(params, objective_fun, OF_name) {
     
   }
  
-  png(paste0("output/plots/scatter/", OF_name, ".png"), width = 11, height = 8.5, units = 'in',res = 1000)
+  png(paste0("output/plots/scatter/", OF_name, ".png"), width = 17, height = 11, units = 'in',res = 1000)
   # save grid of parameter scatter plots for each OF
-  ggarrange(plotlist = plots, widths = c(ceiling(sqrt(ncol(params))), ceiling(ncol(params)/ceiling(sqrt(ncol(params))))))
+  print(ggarrange(plotlist = plots, widths = c(ceiling(sqrt(ncol(params))), ceiling(ncol(params)/ceiling(sqrt(ncol(params)))))))
   dev.off()      
   
 }
