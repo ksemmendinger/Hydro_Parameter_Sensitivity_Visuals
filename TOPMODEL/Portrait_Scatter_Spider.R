@@ -11,18 +11,6 @@ OF <- read.csv("input/OF_values.csv", header = TRUE) %>%
   dplyr::select(-1)
   # "model_runs" rows, "num_OF" columns
 
-obs <- read.csv("input/observation_ts.csv", header = TRUE) %>%
-  dplyr::select(-1)
-  # "time_steps" row, "index" and "value" columns 
-
-sim <- read.csv("input/simulation_ts.csv", header = TRUE) %>%
-  dplyr::select(-1)
-  # "model_runs" rows, "time_steps" columns
-
-timestamps <- read.csv("input/timestamps.csv", header = TRUE)
-  # "time_steps" rows
-
-
 # save names of objective functions and parameters
 OF_names <- colnames(OF)
 param_names <- colnames(pars)
@@ -49,7 +37,7 @@ for (i in 1:num_OF) {
   
   # subset by objective function, i
   objective_fun <- OF[, i]
-
+  
   # create scatterplots of all parameters versus objective function, i
   par_OF_scatter(params = pars, objective_fun, OF_name = colnames(OF)[i])
   
@@ -57,9 +45,9 @@ for (i in 1:num_OF) {
 
 # portrait plots of objective functions versus parameter values
 source("../Scripts/portrait_plots.R")
-portrait_plot(results_sobol)
-portrait_plot(results_delta)
-portrait_plot(results_ols)
+portrait_plot(results_sobol, "sobol")
+portrait_plot(results_delta, "delta")
+portrait_plot(results_ols, "ols")
 
 # spiders plots of objective functions versus parameter values
 source("../Scripts/spider_plots.R")
