@@ -44,9 +44,9 @@ for (i in 1:num_OF) {
 
 # portrait plots of objective functions versus parameter values
 source("../Scripts/portrait_plots.R")
-portrait_plot(results_sobol)
-portrait_plot(results_delta)
-portrait_plot(results_ols)
+portrait_plot(results_sobol, "sobol")
+portrait_plot(results_delta, "delta")
+portrait_plot(results_ols, "ols")
 
 # spiders plots of objective functions versus parameter values
 source("../Scripts/spider_plots.R")
