@@ -12,7 +12,7 @@ Image from: Knighton, J.; DeGaetano, A.; Walter, M.A. Hydrologic State Influence
 ### Storm Water Management Model (SWMM) Model Configuration
 - https://www.epa.gov/water-research/storm-water-management-model-swmm
 - Lumped modeling approach
-- 24,000 SWMM model runs with parameter sets sampled from uniform distributions
+- 24,000 SWMM model runs with parameter sets sampled from Saltelli sampling scheme
 - The model was configured with datasets from:
   - Web Soil Survey (NASS, USDA)
   - 2011 National Land Cover Dataset (USGS, 2014)
