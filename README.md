@@ -24,8 +24,6 @@ conda env create -f sens_env.yml
 conda activate sens_env
 ```
 
-The separate dependencies are listed below.
-
 #### Required python3 (v3.6.8) libraries:
 Intall tzlocal (https://pypi.org/project/tzlocal/)
 ```
