@@ -43,7 +43,7 @@ import pandas as pd
 import numpy as np
 import math
 import matplotlib.pyplot as plt
-import network as nx
+import networkx as nx
 import itertools
 import csv
 import scipy
