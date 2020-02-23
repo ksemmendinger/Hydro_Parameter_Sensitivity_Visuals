@@ -66,7 +66,7 @@ def runABC(df_parms,df_OFs,runs,bins,color1,color2):
         bayes_approx_of.to_csv('output/bayes_parameters_'+str(ofs[i])+'.csv',index=False)
     
         # print ABC results and make figures
-        print('precent of models with'+str(ofs[i])+', tolerance ='+str(tolerances[i])+':',str(len(results[i])/runs),'%')
+        print('precent of models with '+str(ofs[i])+', tolerance = '+str(tolerances[i])+':',str(len(results[i])/runs),'%')
         make_histograms(df_parms,bayes_approx_of,bins,0.5,colors[0],colors[i+1],parameters,ofs[i])
         make_cdfs_pdfs(df_parms,bayes_approx_of,bins,0.5,colors[0],colors[i+1],parameters,ofs[i])
 
