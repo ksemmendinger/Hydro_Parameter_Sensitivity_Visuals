@@ -1,14 +1,3 @@
-['PERC_FlowWeightedReff'],0.41727140917330996
-['Alpha_FlowWeightedReff'],0.6011865139286197
-['K1_FlowWeightedReff'],0.5822553449795198
-['K2_FlowWeightedReff'],0.506313930940828
-['MAXBAS_FlowWeightedReff'],0.4460994402505155
-['Cet_FlowWeightedReff'],0.6496531199097675
-['TT_1_FlowWeightedReff'],0.3049437413502548
-['CFMAX_1_FlowWeightedReff'],0.5443035841116939
-['SFCF_1_FlowWeightedReff'],0.7001958536340129
-['CFR_1_FlowWeightedReff'],0.48067242994907555
-['CWH_1_FlowWeightedReff'],0.5194468415819655
-['FC_1_FlowWeightedReff'],0.4809953970080546
-['LP_1_FlowWeightedReff'],0.5846261766485641
-['BETA_1_FlowWeightedReff'],0.5543717620177073
+version https://git-lfs.github.com/spec/v1
+oid sha256:88c32bd3d74018441c61757be11cc634bfc71a8f2fe327570379f5d906e5c34b
+size 652
