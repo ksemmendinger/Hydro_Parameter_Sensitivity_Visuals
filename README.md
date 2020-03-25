@@ -21,7 +21,7 @@ The <strong><em>environment.yml</em></strong> file is an environment for Anacond
 
 ```
 conda env create -f environment.yml
-conda activate sens_env
+conda activate si_py
 ```
 
 #### Required python3 (v3.6.8) libraries:
