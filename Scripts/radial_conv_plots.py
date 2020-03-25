@@ -200,7 +200,12 @@ def radial_conv_plots(problem, results, OF):
         
         plt.axis('off')
         plt.tight_layout()
+<<<<<<< HEAD
+        plt.savefig('output/plots/radial_convergence/radial_conv_' + OF.columns[j] + '.png', bbox_inches = 'tight', transparent = False)
+        plt.savefig('output/plots/radial_convergence/radial_conv_' + OF.columns[j] + '.pdf', format = 'pdf', dpi = 1000)
+=======
         #plt.savefig('output/plots/radial_convergence/radial_conv_' + OF.columns[j] + '.png', bbox_inches = 'tight', transparent = True)
         plt.savefig('output/plots/radial_convergence/radial_conv_' + OF.columns[j] + '.eps', format = 'eps', dpi = 1000)
+>>>>>>> refs/remotes/origin/master
         plt.show()
  

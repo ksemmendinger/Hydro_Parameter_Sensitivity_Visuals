@@ -32,10 +32,17 @@ spiderplot <- function(SI) {
                    calcex = 1.5, vlcex = 2, cex.main = 1.5)
         dev.off()
         
+<<<<<<< HEAD
+        # radarchart(OF, pcol = rgb(0.2,0.5,0.5,0.9), pfcol = rgb(0.2,0.5,0.5,0.5), plwd = 4, axistype = 1,
+        #            cglcol = "grey", cglty = 1, axislabcol = "grey", caxislabels = round(seq(min(OF), max(OF), length.out = 5), 3),
+        #            cglwd = 0.8, title = paste0(toupper(colnames(value)[n]), " Spider Plot for OLS Sensitivity Analysis"),
+        #            calcex = 1.5, vlcex = 2, cex.main = 1.5)
+=======
         radarchart(OF, pcol = rgb(0.2,0.5,0.5,0.9), pfcol = rgb(0.2,0.5,0.5,0.5), plwd = 4, axistype = 1,
                    cglcol = "grey", cglty = 1, axislabcol = "grey", caxislabels = round(seq(min(OF), max(OF), length.out = 5), 3),
                    cglwd = 0.8, title = paste0(toupper(colnames(value)[n]), " Spider Plot for OLS Sensitivity Analysis"),
                    calcex = 1.5, vlcex = 2, cex.main = 1.5)
+>>>>>>> refs/remotes/origin/master
         
       }
       
@@ -64,10 +71,17 @@ spiderplot <- function(SI) {
                    calcex = 1.5, vlcex = 2, cex.main = 1.5)
         dev.off()
         
+<<<<<<< HEAD
+        # radarchart(OF, pcol = rgb(0.2, 0.5, 0.5, 0.9), pfcol = rgb(0.2, 0.5, 0.5, 0.5), plwd = 4, axistype = 1,
+        #            cglcol = "grey", cglty = 1, axislabcol = "grey", caxislabels = round(seq(min(OF), max(OF), length.out = 5), 3),
+        #            cglwd = 0.8, title = paste0(toupper(colnames(value)[n]), " Spider Plot for ", toTitleCase(dimnames(with_conf)[[3]][1])," Sensitivity Analysis"),
+        #            calcex = 1.5, vlcex = 2, cex.main = 1.5)
+=======
         radarchart(OF, pcol = rgb(0.2, 0.5, 0.5, 0.9), pfcol = rgb(0.2, 0.5, 0.5, 0.5), plwd = 4, axistype = 1,
                    cglcol = "grey", cglty = 1, axislabcol = "grey", caxislabels = round(seq(min(OF), max(OF), length.out = 5), 3),
                    cglwd = 0.8, title = paste0(toupper(colnames(value)[n]), " Spider Plot for ", toTitleCase(dimnames(with_conf)[[3]][1])," Sensitivity Analysis"),
                    calcex = 1.5, vlcex = 2, cex.main = 1.5)
+>>>>>>> refs/remotes/origin/master
 
       }
     
