@@ -54,7 +54,6 @@ def make_cdfs_pdfs(df_parms,bayes_approx,bins,alpha,cc1,cc2,parameters,metric):
 
 def runABC(df_parms,df_OFs,runs,bins,color1,color2):
     # models with objective functions within tolerance thresholds
-    #results_of1,results_of2,results_of3,results_of4 = np.array(approx_bayes_calc_OF(df_parms,df_OFs,runs))
     results = np.array(approx_bayes_calc_OF(df_parms,df_OFs,runs))
     
     ofs = list(df_OFs.columns.values)
