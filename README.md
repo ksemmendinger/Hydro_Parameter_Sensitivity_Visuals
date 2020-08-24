@@ -1,5 +1,5 @@
 # A Visualization Workflow for Quantifying Parameter Sensitivities to Uncertainties for Hydrologic Models
-## National Water Center Innovators Program: Summer Institute
+## National Water Center Innovators Program: Summer Institute 2019
 ### Hydroinformatics Theme
 Authors: [Kyla Semmendinger](mailto:kts48@cornell.edu), [Catherine Finkenbiner](mailto:finkenbc@oregonstate.edu)
 
