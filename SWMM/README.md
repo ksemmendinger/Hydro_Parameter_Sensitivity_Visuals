@@ -7,7 +7,7 @@
 - 325 km<sup>2</sup> watershed 
 
 <img width="761" alt="Screen Shot 2019-07-15 at 8 50 42 AM" src="https://user-images.githubusercontent.com/20464090/61222040-73122e80-a6df-11e9-915b-8bf5410988f8.png">
-Image from: Knighton, J.; DeGaetano, A.; Walter, M.A. Hydrologic State Influence on Riverine Flood Discharge for a Small Temperate Watershed (Fall Creek, USA): Negative Feedbacks on the Effects of Climate Change. *J. Hydrometeorol.* **2017**, 431-449 DOI: 10.1175/JHM-D-16-0164.1 
+Image from: Knighton, J.; DeGaetano, A.; Walter, M.A. Hydrologic State Influence on Riverine Flood Discharge for a Small Temperate Watershed (Fall Creek, USA): Negative Feedbacks on the Effects of Climate Change. J. Hydrometeorol. 2017, 431-449 DOI: 10.1175/JHM-D-16-0164.1 
 
 ### Storm Water Management Model (SWMM) Model Configuration
 - https://www.epa.gov/water-research/storm-water-management-model-swmm
