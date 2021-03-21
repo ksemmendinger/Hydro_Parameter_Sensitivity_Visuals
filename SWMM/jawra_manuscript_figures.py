@@ -11,6 +11,7 @@ import pandas as pd
 import numpy as np
 import os
 import matplotlib
+import datetime as dt
 from matplotlib import pyplot as plt
 
 matplotlib.rcParams.update({'font.size': 14})
@@ -32,8 +33,8 @@ def make_fig2(timestamps, sim, obs):
     ax = fig.add_subplot(1, 2, 1)
     ax.plot(timestamps['x'], obs, c = 'black')
     ax.set_ylabel(r'Discharge $(m^3/hr)$', fontsize = 15)
-    ax.set_xlim(0, 100)
-    ax.tick_params(axis='x', labelrotation = 45)
+    ax.set_ylim(0, 80)
+    ax.tick_params(axis='x', labelrotation = 25)
     
     # sort historical data in percentiles of magnitude
     obs_sort = np.sort(obs)    
@@ -71,11 +72,12 @@ def make_fig2(timestamps, sim, obs):
         
     ax2.plot(P, obs_sort, c = 'black', linewidth = 2, label = 'Historical record')
     ax2.set_xlim(0, 100)
-    ax2.legend(handles = handles, labels = labels, framealpha = 1, fontsize = 8, loc = 'upper left', title = 'Frequency in experiment', ncol = 2)
+    ax2.set_ylim(0, 80)
+    ax2.legend(handles = handles, labels = labels, framealpha = 1, fontsize = 10, loc = 'upper left', title = 'Frequency in experiment', ncol = 2)
     ax2.set_ylabel(r'Discharge $(m^3/hr)$', fontsize = 15)
     ax2.set_xlabel('Magnitude Percentile', fontsize = 15)
     
-    ax.text(90,75,'a)')
+    ax.text(dt.date(2013, 6, 15),75,'a)')
     ax2.text(90,75,'b)')
     plt.tight_layout()
     plt.savefig('JAWRA_Figures/Figure2_magnitude_percentile_plot.pdf', dpi = 1000)
