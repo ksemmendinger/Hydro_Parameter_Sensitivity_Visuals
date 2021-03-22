@@ -35,7 +35,10 @@ print(ggarrange(plotlist = plots, widths = c(ceiling(sqrt(ncol(data))), ceiling(
 dev.off()   
 
 
-# Figure 5. Spider plot
+# Figure 5. Spider plot - run from original workflow (no need to update for paper)
+results_sobol <- read.csv("output/formatted_sobol.csv", header = TRUE, row.names=0)
+results_delta <- read.csv("output/formatted_delta.csv", header = TRUE, row.names=0)
 
+# Figure 6. Radial Convergence Plot - run from original workflow (no need to update for paper)
 
-# Figure 7. Portrait plots
+# Figure 7. Portrait plots - run from original workflow (no need to update for paper)

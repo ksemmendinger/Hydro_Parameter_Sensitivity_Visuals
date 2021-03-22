@@ -28,7 +28,7 @@ portrait_plot <- function(SI, SI_name) {
       # 
       
     } else {
-    
+      
       value <- as.matrix(with_conf[, , 1])
       
       # write and save portrait plot
@@ -44,5 +44,5 @@ portrait_plot <- function(SI, SI_name) {
     }
     
   }
-
+  
 }
