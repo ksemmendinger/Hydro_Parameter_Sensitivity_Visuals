@@ -32,8 +32,8 @@ def make_fig2(timestamps, sim, obs):
     fig = plt.figure(figsize=(12,5))
     ax = fig.add_subplot(1, 2, 1)
     ax.plot(timestamps['x'], obs, c = 'black')
-    ax.set_ylabel(r'Discharge $(m^3/hr)$', fontsize = 15)
-    ax.set_ylim(0, 80)
+    ax.set_ylabel(r'Discharge $(cms)$', fontsize = 15)
+    ax.set_ylim(0, 75)
     ax.tick_params(axis='x', labelrotation = 25)
     
     # sort historical data in percentiles of magnitude
@@ -72,13 +72,13 @@ def make_fig2(timestamps, sim, obs):
         
     ax2.plot(P, obs_sort, c = 'black', linewidth = 2, label = 'Historical record')
     ax2.set_xlim(0, 100)
-    ax2.set_ylim(0, 80)
+    ax2.set_ylim(0, 75)
     ax2.legend(handles = handles, labels = labels, framealpha = 1, fontsize = 10, loc = 'upper left', title = 'Frequency in experiment', ncol = 2)
-    ax2.set_ylabel(r'Discharge $(m^3/hr)$', fontsize = 15)
+    ax2.set_ylabel(r'Discharge $(cms)$', fontsize = 15)
     ax2.set_xlabel('Magnitude Percentile', fontsize = 15)
     
-    ax.text(dt.date(2013, 6, 15),75,'a)')
-    ax2.text(90,75,'b)')
+    ax.text(dt.date(2013, 6, 15),70,'a)')
+    ax2.text(90,70,'b)')
     plt.tight_layout()
     plt.savefig('JAWRA_Figures/Figure2_magnitude_percentile_plot.pdf', dpi = 1000)
     
