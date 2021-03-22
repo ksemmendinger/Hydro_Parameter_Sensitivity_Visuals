@@ -14,18 +14,28 @@ data[,"B1"] <- pars["B1"]
 data[,"NSE"] <- OF["nse"]
 plots <- list()
 
-for (j in 1:3) {
+for (j in 1:2) {
   # create scatter plot of OF vs parameter
   sctplt <- ggplot(data, aes(x = data[, j], y = NSE)) + 
     geom_point(size = 1, colour = "#016c59") + 
-    xlab(paste0(colnames(pars)[j])) +
-    ylab("NSE")
-    theme(axis.title = element_text(size = 25, color = "black"),
-          axis.text = element_text(size = 20))
-  theme(axis.title = element_text(size = "15", color = "black"),
-        axis.text = element_text(size = 15))
+    xlab(paste0(colnames(data)[j])) +
+    ylab("NSE") + 
+    theme(axis.text.x = element_text(size=14, angle = 25),
+          axis.text.y = element_text(size=14),
+          axis.title = element_text(size = 18, color = "black"),
+          axis.text = element_text(size = 18))
+  #theme(text = element_text(size=14))
   
   # save to list for gridded plot
-  plots[[paste(colnames(pars)[j])]] <- ggplotGrob(sctplt)
-  
+  plots[[paste(colnames(data)[j])]] <- ggplotGrob(sctplt)
 }
+
+pdf(paste0("JAWRA_Figures/Fig4_scatter.pdf"), width = 12, height = 5)
+print(ggarrange(plotlist = plots, widths = c(ceiling(sqrt(ncol(data))), ceiling(ncol(data)/ceiling(sqrt(ncol(data)))))))
+dev.off()   
+
+
+# Figure 5. Spider plot
+
+
+# Figure 7. Portrait plots
