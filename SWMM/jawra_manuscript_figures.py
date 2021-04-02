@@ -81,6 +81,7 @@ def make_fig2(timestamps, sim, obs):
     ax2.text(90,70,'b)')
     plt.tight_layout()
     plt.savefig('JAWRA_Figures/Figure2_magnitude_percentile_plot.pdf', dpi = 1000)
+    plt.savefig('JAWRA_Figures/Figure2_magnitude_percentile_plot.png', dpi = 1000)
     
 def magnitude_perc_plots_fig2():
     sim = pd.read_excel("input/simulation_ts.xlsx", index_col = 0)
@@ -117,7 +118,7 @@ def make_fig3(df_parms,df_OFs,runs,bins):
     ax2.text(3.75,0.025,'b)')
     plt.tight_layout()
     plt.savefig('JAWRA_Figures/Figure3_abc.pdf', dpi = 1000)
-    
+    plt.savefig('JAWRA_Figures/Figure3_abc.png', dpi = 1000)
     
 def ABC_plots_fig3():
     pars = pd.read_csv("input/params.csv", header = 0)
