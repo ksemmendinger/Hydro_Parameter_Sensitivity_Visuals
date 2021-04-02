@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1e569ec235c60ce7081c20e8fdc7bd24f04afa00838b7181741c2ec62cfaa31e
-size 398
+['w_pbias'],0.8657504380383425
+['n_imperv_pbias'],0.7290577520623764
+['n_perv_pbias'],0.7323809194590003
+['s_imperv_pbias'],0.7090354188805621
+['s_perv_pbias'],0.702879495676551
+['k_sat_pbias'],0.6809031126853082
+['per_routed_pbias'],0.5974131357623196
+['cmelt_pbias'],0.7090917013194489
+['Tb_pbias'],0.00023954202524079093
+['A1_pbias'],0.8469443961562764
+['B1_pbias'],0.8294084889486286

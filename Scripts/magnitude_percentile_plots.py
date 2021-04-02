@@ -28,7 +28,7 @@ def magnitude_perc_plots(sim, obs):
     ax = fig.add_subplot(1, 1, 1)
     ax.plot(np.arange(len(obs)), obs, c = 'black')
     ax.set_ylabel('Observation Value', fontsize = 15)
-    ax.set_xlabel('Observation', fontsize = 15)
+    ax.set_xlabel('Time', fontsize = 15)
     plt.savefig('output/plots/magnitude_perc/observation_data.png', dpi = 1000)
     # plt.savefig('output/plots/magnitude_perc/observation_data.eps', format = 'eps', dpi = 1000)
 

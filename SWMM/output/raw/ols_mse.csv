@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:caf6c11b854a0be612b6efa9dff137dc6bafef3d3c1d2e8982a3483f5cc3cbd4
-size 377
+['w_mse'],0.9177051144659594
+['n_imperv_mse'],0.7761157896139894
+['n_perv_mse'],0.777371381401819
+['s_imperv_mse'],0.7443646544920102
+['s_perv_mse'],0.7455556136355714
+['k_sat_mse'],0.7403544670886499
+['per_routed_mse'],0.7349652934476547
+['cmelt_mse'],0.7515400393155436
+['Tb_mse'],0.0001426695994772853
+['A1_mse'],0.8032966986951596
+['B1_mse'],0.8974777044593772
